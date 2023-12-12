@@ -1,8 +1,7 @@
 <div class="mobile-search">
     <form action="#" class="search-form">
         <img src="{{ asset('assets/img/svg/search.svg') }}" alt="search" class="svg">
-        <input class="form-control me-sm-2 box-shadow-none" type="search" placeholder="Search..."
-            aria-label="Search">
+        <input class="form-control me-sm-2 box-shadow-none" type="search" placeholder="Search..." aria-label="Search">
     </form>
 </div>
 <div class="mobile-author-actions"></div>
@@ -29,8 +28,7 @@
                     </a>
                     <form action="#" class="search-form-topMenu">
                         <span class="search-icon uil uil-search"></span>
-                        <input class="form-control me-sm-2 box-shadow-none" type="search"
-                            placeholder="Search..." aria-label="Search">
+                        <input class="form-control me-sm-2 box-shadow-none" type="search" placeholder="Search..." aria-label="Search">
                     </form>
                 </li>
 
@@ -42,18 +40,15 @@
                         </a>
                         <div class="dropdown-parent-wrapper">
                             <div class="dropdown-wrapper">
-                                <h2 class="dropdown-wrapper__title">Notifications <span
-                                        class="badge-circle badge-warning ms-1">4</span></h2>
+                                <h2 class="dropdown-wrapper__title">Notifications <span class="badge-circle badge-warning ms-1">4</span></h2>
                                 <ul>
-                                    <li
-                                        class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
+                                    <li class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
                                         <div class="nav-notification__type nav-notification__type--primary">
                                             <img class="svg" src="{{ asset('assets/img/svg/inbox.svg') }}" alt="inbox">
                                         </div>
                                         <div class="nav-notification__details">
                                             <p>
-                                                <a href="" class="subject stretched-link text-truncate"
-                                                    style="max-width: 180px;">James</a>
+                                                <a href="" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
                                                 <span>sent you a message</span>
                                             </p>
                                             <p>
@@ -61,15 +56,13 @@
                                             </p>
                                         </div>
                                     </li>
-                                    <li
-                                        class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
+                                    <li class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
                                         <div class="nav-notification__type nav-notification__type--secondary">
                                             <img class="svg" src="{{ asset('assets/img/svg/upload.svg') }}" alt="upload">
                                         </div>
                                         <div class="nav-notification__details">
                                             <p>
-                                                <a href="" class="subject stretched-link text-truncate"
-                                                    style="max-width: 180px;">James</a>
+                                                <a href="" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
                                                 <span>sent you a message</span>
                                             </p>
                                             <p>
@@ -77,15 +70,13 @@
                                             </p>
                                         </div>
                                     </li>
-                                    <li
-                                        class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
+                                    <li class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
                                         <div class="nav-notification__type nav-notification__type--success">
                                             <img class="svg" src="{{ asset('assets/img/svg/log-in.svg') }}" alt="log-in">
                                         </div>
                                         <div class="nav-notification__details">
                                             <p>
-                                                <a href="" class="subject stretched-link text-truncate"
-                                                    style="max-width: 180px;">James</a>
+                                                <a href="" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
                                                 <span>sent you a message</span>
                                             </p>
                                             <p>
@@ -93,15 +84,13 @@
                                             </p>
                                         </div>
                                     </li>
-                                    <li
-                                        class="nav-notification__single nav-notification__single d-flex flex-wrap">
+                                    <li class="nav-notification__single nav-notification__single d-flex flex-wrap">
                                         <div class="nav-notification__type nav-notification__type--info">
                                             <img class="svg" src="{{ asset('assets/img/svg/at-sign.svg') }}" alt="at-sign">
                                         </div>
                                         <div class="nav-notification__details">
                                             <p>
-                                                <a href="" class="subject stretched-link text-truncate"
-                                                    style="max-width: 180px;">James</a>
+                                                <a href="" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
                                                 <span>sent you a message</span>
                                             </p>
                                             <p>
@@ -109,15 +98,13 @@
                                             </p>
                                         </div>
                                     </li>
-                                    <li
-                                        class="nav-notification__single nav-notification__single d-flex flex-wrap">
+                                    <li class="nav-notification__single nav-notification__single d-flex flex-wrap">
                                         <div class="nav-notification__type nav-notification__type--danger">
                                             <img src="{{ asset('assets/img/svg/heart.svg') }}" alt="heart" class="svg">
                                         </div>
                                         <div class="nav-notification__details">
                                             <p>
-                                                <a href="" class="subject stretched-link text-truncate"
-                                                    style="max-width: 180px;">James</a>
+                                                <a href="" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
                                                 <span>sent you a message</span>
                                             </p>
                                             <p>
@@ -135,10 +122,8 @@
 
                 <li class="nav-author">
                     <div class="dropdown-custom">
-                        <a href="javascript:;" class="nav-item-toggle"><img src="{{ asset('assets/img/author-nav.jpg') }}"
-                                alt="" class="rounded-circle">
-                            <span class="nav-item__title">Danial<i
-                                    class="las la-angle-down nav-item__arrow"></i></span>
+                        <a href="javascript:;" class="nav-item-toggle"><img src="{{ asset('assets/img/author-nav.jpg') }}" alt="" class="rounded-circle">
+                            <span class="nav-item__title">{{auth()->user()->name}}<i class="las la-angle-down nav-item__arrow"></i></span>
                         </a>
                         <div class="dropdown-parent-wrapper">
                             <div class="dropdown-wrapper">
@@ -147,8 +132,8 @@
                                         <img src="{{ asset('assets/img/author-nav.jpg') }}" alt="" class="rounded-circle">
                                     </div>
                                     <div>
-                                        <h6>Rabbi Islam Rony</h6>
-                                        <span>UI Designer</span>
+                                        <h6>{{auth()->user()->name}}</h6>
+                                        <span>{{auth()->user()->roles->pluck('name')->first()}}</span>
                                     </div>
                                 </div>
                                 <div class="nav-author__options">
@@ -162,7 +147,7 @@
                                                 <i class="uil uil-setting"></i>
                                                 Settings</a>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <a href="">
                                                 <i class="uil uil-key-skeleton"></i> Billing</a>
                                         </li>
@@ -173,9 +158,12 @@
                                         <li>
                                             <a href="">
                                                 <i class="uil uil-bell"></i> Help</a>
-                                        </li>
+                                        </li> -->
                                     </ul>
-                                    <a href="" class="nav-author__signout">
+                                    <form id="logoutForm" method="post" action="{{route('administrative.logout')}}" style="display: none">
+                                        @csrf
+                                    </form>
+                                    <a href="javascript:;" onclick="document.getElementById('logoutForm').submit();" class="nav-author__signout">
                                         <i class="uil uil-sign-out-alt"></i> Sign Out</a>
                                 </div>
                             </div>

@@ -18,12 +18,6 @@ class AuthController extends Controller
   {
     return view('administrative.login');
   }
-  public function adminIndex()
-  {
-    return view('administrative.dashboard');
-  }
-
-
   protected function authenticated(Request $request, $user)
   {
     return redirect('/dashboard');
@@ -42,20 +36,18 @@ class AuthController extends Controller
   {
 
     $this->validate($request, [
-      'employee_id' => 'required', 'password' => 'required',
+      'email' => 'email|required', 'password' => 'required',
     ]);
     $credentials = [
-      'employee_id' => $request->get('employee_id'),
+      'email' => $request->get('email'),
       'password' => $request->get('password')
     ];
-    dd(Auth::attempt($credentials));
     $result = Auth::attempt($credentials);
 
     if ($result) {
-      $user = $request->user();
       return redirect()->route('administrative.dashboard');
     } else {
-      $errors = new MessageBag(['password' => ['Employee ID and/or Password invalid.']]);
+      $errors = new MessageBag(['password' => ['Email or Password invalid.']]);
       return redirect()->back()->withErrors($errors);
     }
   }

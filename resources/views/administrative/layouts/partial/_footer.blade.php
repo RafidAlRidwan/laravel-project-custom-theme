@@ -4,11 +4,11 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="footer-copyright">
-                        <p><span>© 2023</span><a href="#">Singularity Limited</a>
+                        <p><span>© 2023</span><a href="https://singularitybd.com/" target="_blank">Singularity Limited</a>
                         </p>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <!-- <div class="col-md-6">
                     <div class="footer-menu text-end">
                         <ul>
                             <li>
@@ -22,8 +22,7 @@
                             </li>
                         </ul>
                     </div>
-                    <!-- ends: .Footer Menu -->
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

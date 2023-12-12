@@ -2,55 +2,55 @@
 
 @section('content')
 <div class="edit-profile__logos">
-    <a href="index.html">
-       <img class="dark" src="{{ asset('assets/img/logo-dark.png') }}" alt="">
-       <img class="light" src="{{ asset('assets/img/logo-white.png') }}" alt="">
-    </a>
- </div>
- <div class="card border-0">
-    <div class="card-header">
-       <div class="edit-profile__title">
-          <h6>Sign in HexaDash</h6>
-       </div>
-    </div>
-    <div class="card-body">
-        <form  method="post" action="{{ route('login.post') }}">
-            @csrf
-            @if($errors->any())
-                <p style="color: #e60980; font-weight: bold; text-align: center;"> {{$errors->first()}} </p>
-            @endif
+   <a href="index.html">
+      <img class="dark" src="{{ asset('assets/img/logo-dark.png') }}" alt="">
+      <img class="light" src="{{ asset('assets/img/logo-white.png') }}" alt="">
+   </a>
+</div>
+<div class="card border-0">
+   <div class="card-header">
+      <div class="edit-profile__title">
+         <h6>Sign in HexaDash</h6>
+      </div>
+   </div>
+   <div class="card-body">
+      <form method="post" action="{{ route('login.post') }}">
+         @csrf
+         @if($errors->any())
+         <p style="color: #e60980; font-weight: bold; text-align: center;"> {{$errors->first()}} </p>
+         @endif
 
-            <div class="edit-profile__body">
-                <div class="form-group mb-25">
-                    <label for="employee_id">Username or Email Address</label>
-                    <input type="text" class="form-control" id="employee_id" name="employee_id" placeholder="name@example.com">
-                </div>
-                <div class="form-group mb-15">
-                    <label for="password">password</label>
-                    <div class="position-relative">
-                        <input id="password" type="password" class="form-control" name="password" placeholder="Password">
-                        <div data-id="0" id="show-password" class="uil uil-eye-slash text-lighten fs-15 field-icon toggle-password2">
-                        </div>
-                    </div>
-                </div>
-                <div class="admin-condition">
-                    <div class="checkbox-theme-default custom-checkbox ">
-                        <input class="checkbox" type="checkbox" id="check-1">
-                        <label for="check-1">
-                        <span class="checkbox-text">Keep me logged in</span>
-                        </label>
-                    </div>
-                    <a href="forget-password.html">forget password?</a>
-                </div>
-                <div class="admin__button-group button-group d-flex pt-1 justify-content-md-start justify-content-center">
-                    <button type = "submit" class="btn btn-primary btn-default w-100 btn-squared text-capitalize lh-normal px-50 signIn-createBtn ">
-                        sign in
-                    </button>
-                </div>
+         <div class="edit-profile__body">
+            <div class="form-group mb-25">
+               <label for="employee_id">Email Address</label>
+               <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
             </div>
-        </form>
-    </div><!-- End: .card-body -->
-    <div class="px-20">
+            <div class="form-group mb-15">
+               <label for="password">password</label>
+               <div class="position-relative">
+                  <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                  <div data-id="0" id="show-password" class="uil uil-eye-slash text-lighten fs-15 field-icon toggle-password2">
+                  </div>
+               </div>
+            </div>
+            <div class="admin-condition">
+               <div class="checkbox-theme-default custom-checkbox ">
+                  <input class="checkbox" type="checkbox" id="check-1">
+                  <label for="check-1">
+                     <span class="checkbox-text">Keep me logged in</span>
+                  </label>
+               </div>
+               <!-- <a href="forget-password.html">forget password?</a> -->
+            </div>
+            <div class="admin__button-group button-group d-flex pt-1 justify-content-md-start justify-content-center">
+               <button type="submit" class="btn btn-primary btn-default w-100 btn-squared text-capitalize lh-normal px-50 signIn-createBtn ">
+                  sign in
+               </button>
+            </div>
+         </div>
+      </form>
+   </div>
+   <!-- <div class="px-20">
        <p class="social-connector social-connector__admin text-center">
           <span>Or</span>
        </p>
@@ -86,9 +86,21 @@
              Sign up
           </a>
        </p>
-    </div><!-- End: .admin-topbar  -->
- </div>
+    </div> -->
+</div>
 @endsection
 @section('page-js')
-
+<script>
+   $("#show-password").click(function() {
+      var status = $(this).attr('data-id');
+      if (status == 0) {
+         $('#password').attr('type', 'text');
+         var status = $(this).attr('data-id', 1);
+      }
+      if (status == 1) {
+         $('#password').attr('type', 'password');
+         var status = $(this).attr('data-id', 0);
+      }
+   });
+</script>
 @endsection
